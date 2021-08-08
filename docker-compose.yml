@@ -1,0 +1,8 @@
+services:
+  aquasync:
+    image: mikemann/aquasync
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+    - $FAN_CONTROL_TARGET_DIR:/fancontrol
